@@ -1,6 +1,7 @@
 django.jQuery(function ($) {
     'use strict';
     // select private_key/certificate field text on click
+    console.log("Here");
     $('.field-certificate, .field-private_key').find(".readonly").on('click', function () {
         var range, selection;
         if (window.getSelection) {
@@ -17,6 +18,8 @@ django.jQuery(function ($) {
     });
     var operationType = $('.field-operation_type select');
     // enable switcher only in add forms
+    console.log(operationType);
+    console.log($('form .deletelink-box'),$('form .deletelink-box').length );
     if (!operationType.length || $('form .deletelink-box').length > 0) {
         $('.field-operation_type').hide();
         return;
